@@ -29,17 +29,17 @@ def uploadSingleMtz(webBrowser, wait, file: str):
     time.sleep(3)
     wait.until(EC.presence_of_element_located((By.XPATH, fileDrag)))
     webBrowser.find_element(By.XPATH, fileDrag).send_keys(
-        data.path+"\\"+file)
+        data.path+data.get_Path_Separator()+file)
     wait.until(EC.presence_of_element_located((By.XPATH, desc)))
     webBrowser.find_element(By.XPATH, desc).send_keys(
         "Features:\r\n" + "- Digital Clock\r\n" + "- Icons\r\n" + "- Music\r\n" + "- WeekDay")
     webBrowser.execute_script("scroll(350, 0)")
     webBrowser.find_element(By.XPATH, copyrightFile).send_keys(
-        data.path+"\\1copyright\\"+file.replace(".mtz", ".zip"))
+        data.get_Copyright_Path()+file.replace(".mtz", ".zip"))
     time.sleep(5)
     while(True):
         webBrowser.find_element(By.XPATH, tags).clear()
-        with open(data.path+"\\1tags\\"+file.replace(".mtz", ".txt")) as f:
+        with open(data.get_Tag_Path()+file.replace(".mtz", ".txt")) as f:
             line = f.read().split(",")
         for tag in line:
             webBrowser.find_element(By.XPATH, tags).send_keys(tag)

@@ -30,10 +30,9 @@ print(sequenceList)
 
 
 options = Options()
-options.binary_location = "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+options.binary_location = "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
-webBrowser = webdriver.Chrome(
-    executable_path=r"chromedriver.exe", options=options)
+webBrowser = webdriver.Chrome(options=options)
 webBrowser.maximize_window()
 
 homeUrl = "https://in.zhuti.designer.intl.xiaomi.com/"
