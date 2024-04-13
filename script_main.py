@@ -36,6 +36,7 @@ webBrowser = webdriver.Chrome(options=options)
 webBrowser.maximize_window()
 
 homeUrl = "https://in.zhuti.designer.intl.xiaomi.com/"
+# homeUrl = "https://zhuti.designer.intl.xiaomi.com/"
 
 webBrowser.get(homeUrl)
 

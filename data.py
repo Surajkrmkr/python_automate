@@ -1,6 +1,6 @@
 import platform
 
-weekNo = "6"
+weekNo = "32"
 
 isMac = platform.system() == 'Darwin'
 isWindows = platform.system() == 'Windows'

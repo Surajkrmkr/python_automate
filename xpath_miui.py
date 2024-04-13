@@ -13,7 +13,7 @@ submit = "//button[@type='submit']"
 submitBtn = "//*[@id=\"app\"]/section/div[2]/div[1]/div[1]/div/div[2]/button"
 cookieBtn = "//*[@id=\"__cookie_tip\"]/div"
 dialogOkBtn = '//*[@id="app"]/section/div[2]/div[2]/div/div[3]/div/button'
-fileDrag = "//*[@class=\"upload-area\"][3]//input"
+fileDrag = "/html/body/div[3]/div/div[2]/div/div[1]/div/div[2]/div[1]/input"
 desc = "//textarea[contains(@placeholder,'Describe this theme')]"
 tags = "//input[contains(@placeholder,'tags')]"
 tagError = "//div[contains(text(),'no such')]"
